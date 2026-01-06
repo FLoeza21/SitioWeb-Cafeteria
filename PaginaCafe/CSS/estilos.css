@@ -12,8 +12,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    font-family: 'League Spartan', sans-serif;
+    color: #F59127;
     text-align: center;
 }
 
@@ -26,7 +26,7 @@ body {
 
 .main-content h2 {
     font-size: 2.5em;
-    color: white;
+    color: #F59127;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
     background: linear-gradient(135deg, rgba(139, 69, 19, 0.8), rgba(101, 67, 33, 0.8));
@@ -39,13 +39,16 @@ body {
 
 .main-content p {
     font-size: 1.2em;
-    color: #f4f1eb;
+    color: #F59127;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     background: rgba(0, 0, 0, 0.5);
     display: inline-block;
     padding: 15px 30px;
     border-radius: 10px;
+    margin: 20px auto 30px;
+    max-width: 90%;
 }
+
 
 /* Estilos para la barra de navegación */
 nav {
@@ -82,6 +85,7 @@ nav {
     width: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
 }
 
 /* Estilos para el nombre de la marca en la navegación */
@@ -89,9 +93,9 @@ nav {
     margin: 0;
     font-size: 1.8em;
     font-weight: bold;
-    color: white;
+    color: #F59127;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'League Spartan', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -109,7 +113,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #F59127;
     text-decoration: none;
     padding: 12px 18px;
     border-radius: 8px;
@@ -148,98 +152,10 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Carrusel de portada (deslizamiento horizontal por scroll) */
-.hero-carousel {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    margin-top: 80px; /* despeje por la nav fija */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.hero-carousel .slides {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
-.hero-carousel .slides::-webkit-scrollbar { display: none; }
-.hero-carousel .slides { scrollbar-width: none; }
-
-.hero-carousel .slide {
-    flex: 0 0 100%;
-    height: 100%;
-    position: relative;
-    scroll-snap-align: start;
-}
-
-.hero-carousel .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.35);
-    color: #fff;
-    border: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s ease, transform 0.2s ease;
-    z-index: 2;
-}
-
-.carousel-control:hover {
-    background: rgba(0, 0, 0, 0.55);
-    transform: translateY(-50%) scale(1.05);
-}
-
-.carousel-control.prev { left: 16px; }
-.carousel-control.next { right: 16px; }
-
-.carousel-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 14px;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 2;
-}
-
-.carousel-dots button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    padding: 0;
-}
-
-.carousel-dots button.active {
-    background: #d4af37;
-    border-color: #d4af37;
-}
-
 /* Estilos para el pie de página */
 .footer {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(139, 69, 19, 0.8));
-    color: white;
+    color: #F59127;
     padding: 40px 20px 20px;
     margin-top: 50px;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
@@ -256,21 +172,21 @@ nav ul li a:hover {
 }
 
 .footer-section h3 {
-    color: #f4f1eb;
+    color: #F59127;
     margin-bottom: 15px;
     font-size: 1.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .footer-section h4 {
-    color: #d4af37;
+    color: #F59127;
     margin-bottom: 10px;
     font-size: 1.2em;
 }
 
 .footer-section p {
     margin: 8px 0;
-    color: #f4f1eb;
+    color: #F59127;
     line-height: 1.6;
 }
 
@@ -284,30 +200,30 @@ nav ul li a:hover {
 }
 
 .footer-section ul li a {
-    color: #f4f1eb;
+    color: #F59127;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #d4af37;
+    color: #F59127;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ccc;
+    color: #F59127;
 }
 
 /* Redes sociales en el pie de página */
 .social-icons {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 .social-icons a {
@@ -344,6 +260,8 @@ nav ul li a:hover {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .historia-text p {
@@ -353,6 +271,7 @@ nav ul li a:hover {
     margin: 15px 0;
     line-height: 1.8;
     text-align: left;
+    color: #F59127;
 }
 
 .menu-container {
@@ -370,7 +289,7 @@ nav ul li a:hover {
 }
 
 .menu-section h3 {
-    color: #d4af37;
+    color: #F59127;
     margin-bottom: 20px;
     font-size: 1.4em;
     text-align: center;
@@ -384,7 +303,7 @@ nav ul li a:hover {
 .menu-list li {
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: #f4f1eb;
+    color: #F59127;
     font-size: 1.1em;
 }
 
@@ -406,6 +325,7 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     display: block;
+    max-width: 100%;
 }
 
 .ubicacion-container {
@@ -423,13 +343,13 @@ nav ul li a:hover {
 }
 
 .ubicacion-info h3 {
-    color: #d4af37;
+    color: #F59127;
     margin-bottom: 15px;
     font-size: 1.3em;
 }
 
 .ubicacion-info p {
-    color: #f4f1eb;
+    color: #F59127;
     line-height: 1.8;
     margin-bottom: 20px;
 }
@@ -446,7 +366,7 @@ nav ul li a:hover {
 
 .mapa-placeholder {
     text-align: center;
-    color: #f4f1eb;
+    color: #F59127;
     width: 100%;
     aspect-ratio: 16 / 9;
     position: relative;
@@ -463,7 +383,321 @@ nav ul li a:hover {
     display: block;
 }
 
-/* Estilos para la página de inicio */
+/* Estilos Vitrina para la página de inicio */
+.hero-vitrina {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 120px 20px 80px;
+}
+
+.hero-content {
+    max-width: 1400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-wrapper {
+    position: relative;
+}
+
+.hero-title {
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 30px;
+    color: #F59127;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title .line {
+    display: block;
+    overflow: hidden;
+}
+
+.hero-title .line span {
+    display: inline-block;
+    will-change: transform;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #F59127;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../Imagenes/1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    will-change: transform;
+}
+
+.image-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(245, 145, 39, 0.3), rgba(0, 0, 0, 0.5));
+    transform-origin: left center;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #F59127;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 40px;
+    background: #F59127;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.description-section {
+    padding: 120px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.description-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.description-large {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #F59127;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    clip-path: inset(0 0 0 0);
+}
+
+.description-small {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: #F59127;
+    line-height: 1.8;
+    max-width: 800px;
+    opacity: 0.9;
+}
+
+.features-vitrina {
+    padding: 120px 20px;
+    position: relative;
+}
+
+.features-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.feature-item {
+    position: relative;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: 1px solid rgba(245, 145, 39, 0.2);
+    transition: all 0.3s ease;
+    will-change: transform;
+}
+
+.feature-number {
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    font-size: 6rem;
+    font-weight: 700;
+    color: rgba(245, 145, 39, 0.1);
+    line-height: 1;
+    z-index: 0;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    color: #F59127;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 1.1rem;
+    color: #F59127;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.cta-section {
+    padding: 120px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #F59127;
+    font-weight: 700;
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-vitrina {
+    position: relative;
+    padding: 18px 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    overflow: hidden;
+    display: inline-block;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.btn-vitrina span {
+    position: relative;
+    z-index: 2;
+    color: #F59127;
+}
+
+.btn-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #F59127;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: 0;
+}
+
+.btn-primary-vitrina {
+    border: 2px solid #F59127;
+    background: transparent;
+}
+
+.btn-primary-vitrina:hover span {
+    color: #000;
+}
+
+.btn-secondary-vitrina {
+    border: 2px solid #F59127;
+    background: transparent;
+}
+
+.btn-secondary-vitrina:hover span {
+    color: #000;
+}
+
+.btn-vitrina:hover .btn-bg {
+    width: 300px;
+    height: 300px;
+}
+
+/* Responsive para Vitrina */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-image-wrapper {
+        height: 400px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-vitrina {
+        min-height: 80vh;
+        padding: 100px 15px 60px;
+    }
+    
+    .description-section,
+    .features-vitrina,
+    .cta-section {
+        padding: 80px 15px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-vitrina {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Estilos para la página de inicio (mantener compatibilidad) */
 .welcome-section {
     text-align: center;
     padding: 60px 20px;
@@ -476,7 +710,7 @@ nav ul li a:hover {
 
 .welcome-title {
     font-size: 3.5em;
-    color: #f4f1eb;
+    color: #F59127;
     margin-bottom: 20px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     animation: fadeInUp 1s ease-out;
@@ -484,7 +718,7 @@ nav ul li a:hover {
 
 .welcome-subtitle {
     font-size: 1.5em;
-    color: #d4af37;
+    color: #F59127;
     margin-bottom: 40px;
     animation: fadeInUp 1s ease-out 0.3s both;
 }
@@ -534,7 +768,7 @@ nav ul li a:hover {
 .welcome-text p {
     font-size: 1.3em;
     line-height: 1.8;
-    color: #f4f1eb;
+    color: #F59127;
     background: rgba(0, 0, 0, 0.3);
     padding: 25px;
     border-radius: 15px;
@@ -563,24 +797,24 @@ nav ul li a:hover {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #d4af37, #b8941f);
+    background: linear-gradient(135deg, #FFB84D, #FFA500);
     color: #000;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 184, 77, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 6px 20px rgba(255, 184, 77, 0.6);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #f4f1eb;
-    border: 2px solid #d4af37;
+    color: #F59127;
+    border: 2px solid #FFB84D;
 }
 
 .btn-secondary:hover {
-    background: #d4af37;
+    background: #FFB84D;
     color: #000;
     transform: translateY(-3px);
 }
@@ -606,7 +840,7 @@ nav ul li a:hover {
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    border-color: #d4af37;
+    border-color: #FFB84D;
 }
 
 .feature-card:nth-child(2) {
@@ -624,13 +858,13 @@ nav ul li a:hover {
 }
 
 .feature-card h3 {
-    color: #d4af37;
+    color: #F59127;
     font-size: 1.5em;
     margin-bottom: 15px;
 }
 
 .feature-card p {
-    color: #f4f1eb;
+    color: #F59127;
     line-height: 1.6;
     font-size: 1.1em;
 }
@@ -692,58 +926,587 @@ nav ul li a:hover {
     }
     100% {
         transform: scale(1);
+    }
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+/* Estilos para formularios */
+.form-container {
+    max-width: 600px;
+    margin: 40px auto 60px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    color: #F59127;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 184, 77, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #F59127;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #FFB84D;
+    box-shadow: 0 0 10px rgba(255, 184, 77, 0.3);
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #FFB84D, #FFA500);
+    color: #000;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'League Spartan', sans-serif;
+    box-shadow: 0 4px 15px rgba(255, 184, 77, 0.4);
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 184, 77, 0.6);
+}
+
+/* Estilos para bolsa de cafés */
+.bolsa-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.bolsa-card {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+.bolsa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-color: #FFB84D;
+}
+
+.bolsa-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: cover;
+}
+
+.bolsa-card h3 {
+    color: #F59127;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.bolsa-card p {
+    color: #F59127;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    margin-top: 0;
+    flex-grow: 1;
+}
+
+.bolsa-card .precio {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #F59127;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: 15px;
+}
+
+/* Responsive design - Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .main-content {
+        margin-top: 90px;
+        padding: 30px 20px;
+    }
+    
+    .main-content h2 {
+        font-size: 2.2em;
+        padding: 18px 35px;
+    }
+    
+    .main-content p {
+        font-size: 1.1em;
+        padding: 12px 25px;
+    }
+    
     .welcome-title {
-        font-size: 2.5em;
+        font-size: 3em;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1.4em;
+    }
+    
+    .welcome-text p {
+        font-size: 1.2em;
+    }
+    
+    .brand-name {
+        font-size: 1.6em;
+    }
+    
+    nav {
+        padding: 12px 18px;
+    }
+    
+    nav ul {
+        gap: 12px;
+    }
+    
+    nav ul li a {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+    
+    .bolsa-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .bolsa-card {
+        padding: 25px 20px;
+    }
+    
+    .historia-container,
+    .ubicacion-container {
+        gap: 25px;
+    }
+    
+    .historia-text p {
+        font-size: 1.05em;
+    }
+    
+    .form-container {
+        padding: 40px 35px;
+        max-width: 90%;
+    }
+    
+    .features-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive design - Móviles */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+    
+    .main-content {
+        margin-top: 120px;
+        padding: 20px 15px;
+    }
+    
+    .main-content h2 {
+        font-size: 1.8em;
+        padding: 15px 25px;
+        margin-bottom: 15px;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .main-content p {
+        font-size: 1em;
+        padding: 12px 20px;
+        margin: 15px auto 25px;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .welcome-title {
+        font-size: 2em;
+        line-height: 1.2;
     }
 
     .welcome-subtitle {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        margin-bottom: 30px;
     }
     
     .welcome-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+        margin-top: 30px;
     }
     
     .btn-primary, .btn-secondary {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    
+    .welcome-text p {
+        font-size: 1.1em;
+        padding: 20px;
+    }
+    
+    .coffee-cup {
+        font-size: 3em;
+    }
+    
+    .features-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 40px 0;
+        padding: 0 15px;
+    }
+    
+    .feature-card {
+        padding: 25px 20px;
+    }
+    
+    .feature-icon {
+        font-size: 2.5em;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.3em;
+    }
+    
+    .feature-card p {
+        font-size: 1em;
     }
     
     .historia-container,
     .ubicacion-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .historia-text p {
+        padding: 15px;
+        font-size: 1em;
+    }
+    
+    .historia-image img {
+        border-radius: 10px;
+    }
+    
+    .ubicacion-info {
+        padding: 20px;
+    }
+    
+    .ubicacion-info h3 {
+        font-size: 1.2em;
+    }
+    
+    .ubicacion-info p {
+        font-size: 1em;
     }
     
     .menu-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .menu-section {
+        padding: 20px;
+    }
+    
+    .menu-section h3 {
+        font-size: 1.3em;
+    }
+    
+    .menu-list li {
+        font-size: 1em;
+        padding: 8px 0;
+    }
+    
+    .menu-image {
+        margin-top: 20px;
+    }
+    
+    .bolsa-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .bolsa-card {
+        min-height: auto;
+        padding: 20px 15px;
+    }
+    
+    .bolsa-card img {
+        max-width: 180px;
+        margin-bottom: 15px;
+    }
+    
+    .bolsa-card h3 {
+        font-size: 1.2em;
+        margin-bottom: 12px;
+    }
+    
+    .bolsa-card p {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+    }
+    
+    .bolsa-card .precio {
+        font-size: 1.3em;
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+        margin: 30px auto 40px;
+        max-width: 95%;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+    
+    .form-group textarea {
+        min-height: 120px;
+    }
+    
+    .btn-submit {
+        padding: 12px 30px;
+        font-size: 1em;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .footer {
+        padding: 30px 15px 15px;
+        margin-top: 40px;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 25px;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.3em;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.1em;
+    }
+    
+    .footer-section p {
+        font-size: 0.95em;
     }
     
     .social-icons {
-        left: 12px;
-        bottom: 16px;
-        gap: 8px;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
     }
     
     .social-icons img {
-        width: clamp(20px, 7vw, 28px);
+        width: 32px;
+        height: 32px;
     }
     
     nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+    
+    .brand-section {
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .brand-name {
+        font-size: 1.4em;
+        letter-spacing: 0.5px;
     }
     
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 8px;
+        width: 100%;
     }
+    
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Responsive design - Tablets en modo landscape */
+@media (max-width: 1024px) and (min-width: 769px) and (orientation: landscape) {
+    .main-content {
+        margin-top: 80px;
+    }
+    
+    nav {
+        padding: 10px 15px;
+    }
+    
+    .brand-name {
+        font-size: 1.5em;
+    }
+    
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Responsive design - Móviles pequeños */
+@media (max-width: 480px) {
+    .main-content {
+        margin-top: 140px;
+        padding: 15px 10px;
+    }
+    
+    .main-content h2 {
+        font-size: 1.5em;
+        padding: 12px 20px;
+    }
+    
+    .main-content p {
+        font-size: 0.95em;
+        padding: 10px 15px;
+    }
+    
+    .welcome-title {
+        font-size: 1.8em;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1em;
+    }
+    
+    .welcome-text p {
+        font-size: 1em;
+        padding: 15px;
+    }
+    
+    .brand-name {
+        font-size: 1.2em;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+    
+    .btn-primary, .btn-secondary {
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+    
+    .form-container {
+        padding: 25px 15px;
+    }
+    
+    .bolsa-card {
+        padding: 15px 12px;
+    }
+    
+    .bolsa-card img {
+        max-width: 150px;
+    }
+    
+    .bolsa-card h3 {
+        font-size: 1.1em;
+    }
+    
+    .bolsa-card p {
+        font-size: 0.9em;
+    }
+    
+    .bolsa-card .precio {
+        font-size: 1.2em;
+    }
+    
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+}

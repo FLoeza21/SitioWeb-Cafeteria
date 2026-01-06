@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas y Sugerencias - PrinceCoffeeBar</title>
+    <link rel="icon" type="image/png" href="Imagenes/LPP.png">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <!-- Sección de marca (logo + nombre) -->
+        <div class="brand-section">
+            <div class="logo">
+                <img src="Imagenes/LogoPrince.png" alt="PrinceCoffeeBar Logo">
+            </div>
+            <h1 class="brand-name">PrinceCoffeeBar</h1>
+        </div>
+        
+        <!-- Enlaces de navegación -->
+        <ul>
+            <li><a href="Historia.html">Historia</a></li>
+            <li><a href="Ubicacion.html">Ubicación</a></li>
+            <li><a href="Menu.html">Menú</a></li>
+            <li><a href="BolsaCafes.html">Bolsa de Cafés</a></li>
+            <li><a href="QuejasSugerencias.html">Quejas y Sugerencias</a></li>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h2>Quejas y Sugerencias</h2>
+        <p style="margin-bottom: 40px;">Tu opinión es muy importante para nosotros.</p>
+        
+        <div class="form-container">
+            <form action="https://formspree.io/f/xvqkqjqj" method="POST" id="contact-form">
+                <input type="hidden" name="_to" value="Princecoffeebar@icloud.com">
+             
+             
+                <input type="hidden" name="_subject" value="Nuevo mensaje de Quejas y Sugerencias - PrinceCoffeeBar">
+                <input type="hidden" name="_replyto" value="">
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tipo">Tipo de mensaje *</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="queja">Queja</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="comentario">Comentario</option>
+                        <option value="felicitacion">Felicitación</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                
+                <div id="form-message" style="display: none; padding: 15px; margin-bottom: 20px; border-radius: 8px; text-align: center; font-weight: 600;"></div>
+                
+                <div style="text-align: center;">
+                    <button type="submit" class="btn-submit" id="submit-btn">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+        
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = this;
+                const submitBtn = document.getElementById('submit-btn');
+                const messageDiv = document.getElementById('form-message');
+                const emailInput = document.getElementById('email');
+                
+                // Actualizar el campo _replyto con el email del usuario
+                form.querySelector('input[name="_replyto"]').value = emailInput.value;
+                
+                // Deshabilitar el botón mientras se envía
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+                messageDiv.style.display = 'none';
+                
+                // Enviar el formulario
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        messageDiv.style.display = 'block';
+                        messageDiv.style.background = 'rgba(0, 255, 0, 0.2)';
+                        messageDiv.style.color = '#4CAF50';
+                        messageDiv.textContent = '¡Mensaje enviado exitosamente! Te responderemos pronto.';
+                        form.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Enviar Mensaje';
+                    } else {
+                        return response.json().then(data => {
+                            throw new Error(data.error || 'Error al enviar el formulario');
+                        });
+                    }
+                })
+                .catch(error => {
+                    messageDiv.style.display = 'block';
+                    messageDiv.style.background = 'rgba(255, 0, 0, 0.2)';
+                    messageDiv.style.color = '#f44336';
+                    messageDiv.textContent = 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contáctanos directamente a Princecoffeebar@icloud.com';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensaje';
+                });
+            });
+        </script>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PrinceCoffeeBar</h3>
+                <p>Tu lugar favorito para disfrutar del mejor café</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Historia.html">Historia</a></li>
+                    <li><a href="Menu.html">Menú</a></li>
+                    <li><a href="Ubicacion.html">Ubicación</a></li>
+                    <li><a href="BolsaCafes.html">Bolsa de Cafés</a></li>
+                    <li><a href="QuejasSugerencias.html">Quejas y Sugerencias</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>📧 Princecoffeebar@icloud.com</p>
+                <p>📞 238 236 7598</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/18suNDZbp1/?mibextid=wwXIfr"><img src="Imagenes/Facebok.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/princecoffeebar?igsh=MTF2MDc1ajcxb2NneQ%3D%3D&utm_source=qr"><img src="Imagenes/instagram.png" alt="Instagram"></a>
+                    <a href="https://wa.me/522382367598"><img src="Imagenes/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PrinceCoffeeBar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
